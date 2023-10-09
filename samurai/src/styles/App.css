@@ -1,0 +1,50 @@
+body {
+  display: flex;
+  background-color: black;
+}
+
+#titelType {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 500;
+  position: absolute;
+
+  left: 50%;
+  top: 15%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+.undertitle {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+.helm {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  width: 1152px;
+  height: 768px;
+
+  background-image: url("../../public/helm.png");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right;
+}
