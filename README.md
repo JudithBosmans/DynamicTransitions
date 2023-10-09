@@ -1,3 +1,3 @@
 # DynamicTransitions
 
-- https://css-tricks.com/snippets/css/typewriter-effect/
+- https://www.npmjs.com/package/typewriter-effect 
