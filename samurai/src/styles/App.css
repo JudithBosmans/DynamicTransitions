@@ -10,7 +10,7 @@ body {
   position: absolute;
 
   left: 50%;
-  top: 15%;
+  top: 0%;
   width: min-content;
   height: min-content;
 
@@ -26,7 +26,7 @@ body {
 
   position: absolute;
   left: 50%;
-  top: 30%;
+  top: 13%;
   width: min-content;
   height: min-content;
 
@@ -43,8 +43,9 @@ body {
   width: 1152px;
   height: 768px;
 
-  background-image: url("../../public/helm.png");
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right;
 }
+
+

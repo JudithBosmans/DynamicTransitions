@@ -1,0 +1,11 @@
+.cherryBody {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+circle {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
