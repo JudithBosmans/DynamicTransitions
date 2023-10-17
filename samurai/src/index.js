@@ -7,6 +7,9 @@ import "./index.css";
 import ErrorPage from "./error-page";
 import App from "./components/App";
 import Cherry from "./components/Cherry";
+import Bonsai from "./components/Bonsai";
+import Lilly from "./components/Lilly";
+import Outro from "./components/Outro";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +22,21 @@ const router = createBrowserRouter([
         element: <Cherry />,
         errorElement: <ErrorPage />,
       },
+      {
+        path: "/",
+        element: <Bonsai />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <Lilly />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <Outro />,
+        errorElement: <ErrorPage />,
+      },
     ],
   },
 ]);
@@ -28,11 +46,3 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <RouterProvider router={router} />
   </React.StrictMode>
 );
-
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(
-//   <React.StrictMode>
-//     <App />
-//     <Cherry />
-//   </React.StrictMode>
-// );

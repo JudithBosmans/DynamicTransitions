@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import cherryStyle from "../styles/Cherry.css";
 
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const circleVariants = {
   hidden: { scale: 1 },
@@ -126,7 +127,35 @@ const FlowerAnimation = () => {
     );
   }
 
-  return <div>{flowers}</div>;
+  return (
+    <div>
+      {flowers}
+      <h1 id="cherryTitle">
+        <Typewriter
+          options={{
+            strings: ["Cherry blossom", "桜の花"],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      </h1>
+      <h2 id="cherryUndertitle">The birth</h2>
+      <div id="cherryText">
+        <p id="cherryText1">
+          In a tranquil village nestled beneath the snow-capped mountains, a child
+          was born. Cherry blossoms were floating through the air. From its
+          earliest days, it learned the importance of life's fragility,
+          understanding that like the cherry blossoms, life is beautiful but
+          fleeting.
+        </p>
+        <p id="cherryText2">
+          With every gust of wind that carried away the delicate blooms, he
+          embraced the moral values that would guide him on his path. It soon
+          became clear that this child would go on to become a samurai.
+        </p>
+      </div>
+    </div>
+  );
 };
 
 const Cherry = () => {

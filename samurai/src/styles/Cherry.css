@@ -9,3 +9,46 @@ circle {
   stroke-linecap: round;
   fill: transparent;
 }
+
+#cherryTitle {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 500;
+  position: absolute;
+
+  left: 30%;
+  top: 30%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+#cherryUndertitle {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 100;
+
+  position: absolute;
+  left: 15%;
+  top: 55%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+#cherryText {
+  color: #fff;
+  font-size: 25px;
+  font-weight: 100;
+
+  position: absolute;
+  left: 10%;
+  top: 70%;
+  width: 40%;
+}
