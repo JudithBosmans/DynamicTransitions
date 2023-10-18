@@ -10,6 +10,7 @@ import Cherry from "./components/Cherry";
 import Bonsai from "./components/Bonsai";
 import Lilly from "./components/Lilly";
 import Outro from "./components/Outro";
+import Chamomile from "./components/Chamomile";
 
 const router = createBrowserRouter([
   {
@@ -25,6 +26,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Bonsai />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <Chamomile />,
         errorElement: <ErrorPage />,
       },
       {

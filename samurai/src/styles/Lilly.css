@@ -2,6 +2,9 @@
   box-sizing: border-box;
 }
 
+.lillyTitle {
+  color: white;
+}
 html,
 body,
 #root {
@@ -9,8 +12,4 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-body {
-  background: #fffffe;
 }

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 import Cherry from "./Cherry";
 import Bonsai from "./Bonsai";
-import Lilly from "./Lilly";
+import Chamomile from "./Chamomile";
 import Outro from "./Outro";
 
 import "../styles/App.css";
@@ -56,32 +56,29 @@ function App() {
         >
           <p className="undertitle">Told with Hanakotoba</p>
         </ParallaxLayer>
+
         <ParallaxLayer
           offset={1}
-          speed={2}
-          onClick={() => ref.current.scrollTo(2)}
+          speed={2.5}
+          onClick={() => ref.current.scrollTo(1.5)}
         >
           <Cherry />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={2}
-          speed={2}
-          onClick={() => ref.current.scrollTo(3)}
+          offset={1.99}
+          speed={3}
+          onClick={() => ref.current.scrollTo(2)}
         >
           <Bonsai />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={3}
-          speed={2}
-          onClick={() => ref.current.scrollTo(4)}
+          offset={2}
+          speed={4}
+          // onClick={() => ref.current.scrollTo(2.99)}
         >
-          <Lilly />
+          <Chamomile />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={4}
-          speed={2}
-          onClick={() => ref.current.scrollTo(0)}
-        >
+        <ParallaxLayer offset={3} speed={1}>
           <Outro />
         </ParallaxLayer>
       </Parallax>
