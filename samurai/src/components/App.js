@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Cherry from "./Cherry";
 import Bonsai from "./Bonsai";
 import Chamomile from "./Chamomile";
+import Lilly from "./Lilly";
 import Outro from "./Outro";
 
 import "../styles/App.css";
@@ -74,9 +75,16 @@ function App() {
         <ParallaxLayer
           offset={2}
           speed={4}
-          // onClick={() => ref.current.scrollTo(2.99)}
+          onClick={() => ref.current.scrollTo(2.99)}
         >
           <Chamomile />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={2.99}
+          speed={6}
+          onClick={() => ref.current.scrollTo(2.99)}
+        >
+          <Lilly />
         </ParallaxLayer>
         <ParallaxLayer offset={3} speed={1}>
           <Outro />

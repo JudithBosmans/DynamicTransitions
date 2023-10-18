@@ -4,11 +4,11 @@ import { useDrag } from "react-use-gesture";
 import deckStyle from "../styles/Outro.css";
 
 const cards = [
-  require("../pics/card-sakura.png"),
-  require("../pics/card-sakura.png"),
-  require("../pics/card-sakura.png"),
-  require("../pics/card-sakura.png"),
-  require("../pics/card-sakura.png"),
+  require("../pics/cards/card-05.png"),
+  require("../pics/cards/card-04.png"),
+  require("../pics/cards/card-03.png"),
+  require("../pics/cards/card-02.png"),
+  require("../pics/cards/card-01.png"),
 ];
 
 const to = (i) => ({
@@ -43,7 +43,7 @@ function Deck() {
         const isGone = gone.has(index);
         const x = isGone ? (200 + window.innerWidth) * dir : down ? mx : 0; // When a card is gone it flies out left or right, otherwise goes back to zero
         const rot = mx / 100 + (isGone ? dir * 10 * velocity : 0); // How much the card tilts, flicking it harder makes it rotate faster
-        const scale = down ? 1.1 : 1; // Active cards lift up a bit
+        const scale = down ? 1.3 : 1; // Active cards lift up a bit
 
         return {
           x,
