@@ -1,6 +1,7 @@
 body {
   display: flex;
   background-color: black;
+  transition: background-color 1s ease;
 }
 
 #titelType {
@@ -42,8 +43,27 @@ body {
   transform: translate(-50%, -50%);
   width: 1152px;
   height: 768px;
-
   background-repeat: no-repeat;
   background-size: auto 100%;
   background-position: right;
+}
+
+#chrysTitle {
+  color: #000;
+  font-size: 100px;
+  font-weight: 500;
+  position: absolute;
+
+  left: 50%;
+  top: 30%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
+}
+
+#backgroundColorWhite {
+  background-color: white;
 }

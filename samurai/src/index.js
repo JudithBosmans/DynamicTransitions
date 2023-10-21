@@ -6,11 +6,13 @@ import "./index.css";
 
 import ErrorPage from "./error-page";
 import App from "./components/App";
+
 import Cherry from "./components/Cherry";
 import Bonsai from "./components/Bonsai";
-import Lilly from "./components/Lilly";
-import Outro from "./components/Outro";
 import Chamomile from "./components/Chamomile";
+import Lilly from "./components/Lilly";
+import Chrys from "./components/Chrys";
+import Outro from "./components/Outro";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +38,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Lilly />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/",
+        element: <Chrys />,
         errorElement: <ErrorPage />,
       },
       {

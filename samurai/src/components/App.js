@@ -4,10 +4,12 @@ import Cherry from "./Cherry";
 import Bonsai from "./Bonsai";
 import Chamomile from "./Chamomile";
 import Lilly from "./Lilly";
+import Chrys from "./Chrys";
 import Outro from "./Outro";
 
 import "../styles/App.css";
 import helm from "../pics/helm.png";
+import crhysHelm from "../pics/chrysHelm.png";
 
 import Typewriter from "typewriter-effect";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
@@ -79,16 +81,60 @@ function App() {
         >
           <Chamomile />
         </ParallaxLayer>
-        <ParallaxLayer
-          offset={2.99}
-          speed={6}
-          onClick={() => ref.current.scrollTo(2.99)}
-        >
-          <Lilly />
-        </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={1}>
-          <Outro />
-        </ParallaxLayer>
+
+        <div className="panel">
+          <ParallaxLayer
+            className="lillyPanel"
+            offset={2.99}
+            speed={6}
+            onClick={() => ref.current.scrollTo(2.99)}
+          >
+            <Lilly />
+          </ParallaxLayer>
+          <ParallaxLayer
+            className="chrysPanel"
+            offset={3}
+            speed={6}
+            onClick={() => ref.current.scrollTo(2.99)}
+          >
+            <Chrys />
+          </ParallaxLayer>
+          <ParallaxLayer
+            className="chrysPanel"
+            offset={3}
+            speed={6}
+            onClick={() => ref.current.scrollTo(2.99)}
+          >
+            <h1 id="chrysTitle">
+              <Typewriter
+                options={{
+                  strings: ["Grief", "悲しみ"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </h1>
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={3}
+            speed={3}
+            factor={3}
+            id="crhysHelm"
+            className="crhysHelm"
+            style={{
+              backgroundImage: `url(${crhysHelm})`,
+              width: "100%",
+              height: "100%",
+              left: "10%",
+              top: "10%",
+            }}
+          />
+
+          <ParallaxLayer offset={3.99} speed={1}>
+            <Outro />
+          </ParallaxLayer>
+        </div>
       </Parallax>
       <div id="detail"></div>
     </div>
