@@ -41,7 +41,7 @@ const Button = ({ scrollToRef }) => {
             className="text"
             id="Layer_2"
             data-name="Layer 2"
-            onClick={() => handleScroll(1.99)}
+            onClick={() => handleScroll(1)}
           >
             BONSAI
           </p>

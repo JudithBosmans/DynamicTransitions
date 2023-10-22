@@ -4,8 +4,8 @@
   font-weight: 500;
   position: absolute;
 
-  left: 60%;
-  top: 0%;
+  left: 30%;
+  top: 30%;
   width: min-content;
   height: min-content;
 
@@ -28,7 +28,19 @@
   position: absolute;
 
   position: absolute;
-  right: 10%;
-  top: 70%;
+  left: 10%;
+  top: 60%;
+  width: 40%;
+}
+
+#chamomileText2 {
+  color: red;
+  font-size: 30px;
+  font-weight: 300;
+  position: absolute;
+
+  position: absolute;
+  left: 10%;
+  top: 80%;
   width: 40%;
 }

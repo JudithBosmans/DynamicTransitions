@@ -19,10 +19,9 @@ const AnimatedMeshDistortMaterial = animated(MeshDistortMaterial);
 
 function Cylinder() {
   return (
-    <mesh position={[4, -1, 1]}>
+    <mesh position={[5, -2, -1]}>
       {" "}
-      {/* Replace x, y, z with your desired coordinates */}
-      <cylinderGeometry args={[0.1, 0.1, 3, 32]} />
+      <cylinderGeometry args={[0.1, 0.1, 5, 32]} />
       <meshBasicMaterial color="#487748" />
     </mesh>
   );
@@ -167,7 +166,7 @@ export default function Chamomile() {
         <MyScene ref={blobApi} />
       </Canvas>
       <div>
-        <h1 id="bonsaiTitle">
+        <h1 id="chamomileTitle">
           <Typewriter
             options={{
               strings: ["Red Chamomile", "レッドカモミール"],
@@ -177,10 +176,14 @@ export default function Chamomile() {
           />
         </h1>
       </div>
-      <p id="chamomileText ">
-        Amidst a red camellia garden's backdrop, he discovered love's profound
-        beauty. The deep, vibrant red of the camellias mirrored the passion and
-        affection he shared with a kindred soul.
+      <p id="chamomileText">
+        Amidst a red camellia garden's backdrop, the samurai discovered love's
+        profound beauty. The deep, vibrant red of the camellias mirrored the
+        passion and affection they shared with a kindred soul.
+      </p>
+      <p id="chamomileText2">
+        Drag the blob on to the stem to create a Red Chamomile representing love
+        or a first battle.
       </p>
     </div>
   );
