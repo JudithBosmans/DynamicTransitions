@@ -6,6 +6,7 @@ import Chamomile from "./Chamomile";
 import Lilly from "./Lilly";
 import Chrys from "./Chrys";
 import Outro from "./Outro";
+import Button from "./Button";
 
 import "../styles/App.css";
 import helm from "../pics/helm.png";
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div>
-      <Parallax pages={7} ref={ref}>
+      <Parallax pages={5} ref={ref}>
         <ParallaxLayer
           offset={0}
           speed={1}
@@ -135,6 +136,15 @@ function App() {
             <Outro />
           </ParallaxLayer>
         </div>
+        <ParallaxLayer
+          offset={4}
+          speed={3}
+          factor={3}
+          id="Button"
+          className="Button"
+        >
+          <Button scrollToRef={ref} />
+        </ParallaxLayer>
       </Parallax>
       <div id="detail"></div>
     </div>

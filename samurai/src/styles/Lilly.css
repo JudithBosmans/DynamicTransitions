@@ -1,3 +1,17 @@
-.meep {
-  color: white;
+#lillyTitle {
+  color: #fff;
+  font-size: 100px;
+  font-weight: 500;
+  position: absolute;
+
+  left: 50%;
+  top: 60%;
+  width: min-content;
+  height: min-content;
+
+  white-space: nowrap;
+  flex-direction: column;
+  transform: translateX(-50%);
 }
+
+

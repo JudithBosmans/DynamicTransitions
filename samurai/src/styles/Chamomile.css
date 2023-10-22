@@ -23,15 +23,12 @@
 
 #chamomileText {
   color: #fff;
-  font-size: 25px;
-  font-weight: 100;
+  font-size: 30px;
+  font-weight: 300;
   position: absolute;
-  left: 50%;
-  top: 70%;
-  transform: translate(-50%, -50%);
-  width: 50%;
-}
 
-#bonsaiText3 {
-  color: red;
+  position: absolute;
+  right: 10%;
+  top: 70%;
+  width: 40%;
 }

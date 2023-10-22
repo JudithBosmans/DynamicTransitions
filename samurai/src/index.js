@@ -13,6 +13,7 @@ import Chamomile from "./components/Chamomile";
 import Lilly from "./components/Lilly";
 import Chrys from "./components/Chrys";
 import Outro from "./components/Outro";
+import Button from "./components/Button";
 
 const router = createBrowserRouter([
   {
@@ -21,33 +22,38 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "/",
+        path: "/CherryPage",
         element: <Cherry />,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/",
+        path: "/BonsaiPage",
         element: <Bonsai />,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/",
+        path: "/ChamomilePage",
         element: <Chamomile />,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/",
+        path: "/LillyPage",
         element: <Lilly />,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/",
+        path: "/ChrysPage",
         element: <Chrys />,
         errorElement: <ErrorPage />,
       },
       {
-        path: "/",
+        path: "/OutroPage",
         element: <Outro />,
+        errorElement: <ErrorPage />,
+      },
+      {
+        path: "/ButtonPage",
+        element: <Button />,
         errorElement: <ErrorPage />,
       },
     ],

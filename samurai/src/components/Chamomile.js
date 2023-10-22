@@ -177,18 +177,11 @@ export default function Chamomile() {
           />
         </h1>
       </div>
-      <div id="chamomileText">
-        <p id="bonsaiText1">
-          Amidst a red camellia garden's backdrop, he discovered love's profound
-          beauty. The deep, vibrant red of the camellias mirrored the passion
-          and affection he shared with a kindred soul.
-        </p>
-        <p id="bonsaiText2">
-          Their love blossomed like the camellia petals, vibrant and full of
-          life, weaving a tapestry of devotion and shared dreams.
-        </p>
-        <p id="bonsaiText3">Drag the Chamomila to its stem to complete it.</p>
-      </div>
+      <p id="chamomileText ">
+        Amidst a red camellia garden's backdrop, he discovered love's profound
+        beauty. The deep, vibrant red of the camellias mirrored the passion and
+        affection he shared with a kindred soul.
+      </p>
     </div>
   );
 }
