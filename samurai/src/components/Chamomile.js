@@ -15,12 +15,12 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { MeshDistortMaterial } from "@react-three/drei";
 import { Vector2 } from "three";
 
+/* Maakt een geanimeerd 3D materiaal */
 const AnimatedMeshDistortMaterial = animated(MeshDistortMaterial);
 
 function Cylinder() {
   return (
     <mesh position={[5, -2, -1]}>
-      {" "}
       <cylinderGeometry args={[0.1, 0.1, 5, 32]} />
       <meshBasicMaterial color="#487748" />
     </mesh>

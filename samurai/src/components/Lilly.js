@@ -1,74 +1,51 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import lillyStyles from "../styles/Lilly.css";
 
 import * as THREE from "three";
+import { Canvas, useThree, extend } from "@react-three/fiber";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+import { OrbitControls as OrbitControlsImpl } from "three/addons/controls/OrbitControls.js";
 import Typewriter from "typewriter-effect";
 
-// const scene = new THREE.Scene();
-// const camera = new THREE.PerspectiveCamera(
-//   75,
-//   window.innerWidth / window.innerHeight,
-//   0.1,
-//   1000
-// );
+extend({ OrbitControls: OrbitControlsImpl });
 
-// const renderer = new THREE.WebGLRenderer();
-// renderer.setSize(window.innerWidth, window.innerHeight);
-// document.body.appendChild(renderer.domElement);
+function Scene() {
+  const sceneRef = useRef();
+  const { camera, gl } = useThree();
 
-// camera.position.set(0, 0, 350);
-// camera.lookAt(0, 0, 0);
+  useEffect(() => {
+    camera.position.set(2, 2, 5);
+    camera.lookAt(0, 0, 0);
+  }, [camera]);
 
-// const controls = new OrbitControls(camera, renderer.domElement);
-// const loader = new GLTFLoader();
-// let loadedModel;
+  useEffect(() => {
+    const loader = new GLTFLoader();
+    loader.load(
+      "/model/lilly.glb",
+      function (gltf) {
+        sceneRef.current.add(gltf.scene);
+      },
+      undefined,
+      function (error) {
+        console.error(error);
+      }
+    );
+  }, []);
 
-// loader.load(
-//   "./spiderLilly.glb",
-//   (gltf) => {
-//     // Callback function for when the model is loaded
-//     loadedModel = gltf.scene; // Use 'gltf.scene' to access the loaded model
-//     loadedModel.position.y = -170; // Vertical
-//     loadedModel.position.x = 80; // Horizontal
-
-//     scene.add(loadedModel);
-//   },
-//   (xhr) => {
-//     // Progress callback, if needed
-//     console.log((xhr.loaded / xhr.total) * 100 + "% loaded");
-//   },
-//   (error) => {
-//     // Error callback, if there is an issue loading the model
-//     console.error("Error loading GLTF model:", error);
-//   }
-// );
-
-// const ambientLight = new THREE.AmbientLight(0xffffff, 0.5);
-// scene.add(ambientLight);
-
-// const topLight = new THREE.DirectionalLight(0xffffff, 3);
-// topLight.position.set(0, 1, 0);
-// scene.add(topLight);
-
-// // Rotation
-// function animate() {
-//   if (loadedModel) {
-//     loadedModel.rotation.y += 0.01;
-//   }
-
-//   controls.update();
-//   renderer.render(scene, camera);
-
-//   requestAnimationFrame(animate);
-// }
-
-// animate();
+  return (
+    <>
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[10, 10, 5]} intensity={1} />
+      <orbitControls args={[camera, gl.domElement]} />
+      <group ref={sceneRef} />
+    </>
+  );
+}
 
 export const Lilly = () => {
   return (
-    <div>
+    <Canvas>
+      <Scene />
       <h1 id="lillyTitle">
         <Typewriter
           options={{
@@ -78,7 +55,7 @@ export const Lilly = () => {
           }}
         />
       </h1>
-    </div>
+    </Canvas>
   );
 };
 
