@@ -10,42 +10,41 @@ import Typewriter from "typewriter-effect";
 extend({ OrbitControls: OrbitControlsImpl });
 
 function Scene() {
-  const sceneRef = useRef();
-  const { camera, gl } = useThree();
+  // const sceneRef = useRef();
+  // const { camera, gl } = useThree();
 
-  useEffect(() => {
-    camera.position.set(2, 2, 5);
-    camera.lookAt(0, 0, 0);
-  }, [camera]);
+  // useEffect(() => {
+  //   camera.position.set(2, 2, 5);
+  //   camera.lookAt(0, 0, 0);
+  // }, [camera]);
 
-  useEffect(() => {
-    const loader = new GLTFLoader();
-    loader.load(
-      "/model/lilly.glb",
-      function (gltf) {
-        sceneRef.current.add(gltf.scene);
-      },
-      undefined,
-      function (error) {
-        console.error(error);
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   const loader = new GLTFLoader();
+  //   loader.load(
+  //     "/model/lilly.glb",
+  //     function (gltf) {
+  //       sceneRef.current.add(gltf.scene);
+  //     },
+  //     undefined,
+  //     function (error) {
+  //       console.error(error);
+  //     }
+  //   );
+  // }, []);
 
   return (
     <>
-      <ambientLight intensity={0.5} />
+      {/* <ambientLight intensity={0.5} />
       <directionalLight position={[10, 10, 5]} intensity={1} />
       <orbitControls args={[camera, gl.domElement]} />
-      <group ref={sceneRef} />
+      <group ref={sceneRef} /> */}
     </>
   );
 }
 
 export const Lilly = () => {
   return (
-    <Canvas>
-      <Scene />
+    <div>
       <h1 id="lillyTitle">
         <Typewriter
           options={{
@@ -55,7 +54,7 @@ export const Lilly = () => {
           }}
         />
       </h1>
-    </Canvas>
+    </div>
   );
 };
 
